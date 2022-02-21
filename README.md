@@ -20,11 +20,11 @@ const block = async () => { /* do something that might error */ };
 const result = await anticipate(block);
 ```
 
-To configure more tries, or delay by a number of seconds between tries pass it some configuration along with your function.
+To configure more tries, or delay by a number of milliseconds between tries pass it some configuration along with your function.
 
 ```js
 const block = async () => { /* do something that might error */ };
-const result = await anticipate(block, { tries: 5; secondsBetweenTries: 10 });
+const result = await anticipate(block, { tries: 5; millisecondsBetweenTries: 10 });
 ```
 
 ## License

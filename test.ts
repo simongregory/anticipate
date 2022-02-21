@@ -55,7 +55,7 @@ describe('to retry a function until it succeeds, anticipate()', () => {
       .onCall(2).returns(true);
 
     const started = new Date().getTime();
-    const result = await anticipate(block, {secondsBetweenTries: 10});
+    const result = await anticipate(block, {millisecondsBetweenTries: 10});
     const duration = new Date().getTime() - started;
 
     assert.isAbove(duration, 19);

@@ -4,7 +4,7 @@ interface asyncFunction {
 
 interface AnticipationConfig {
   tries: number;
-  secondsBetweenTries: number;
+  millisecondsBetweenTries: number;
 }
 
 function delay(ms:number): Promise<any> {
@@ -26,10 +26,10 @@ async function runBlock(block:asyncFunction, maxRepetitions:number, duration:num
 
 const DefaultConfig: AnticipationConfig = {
   tries: 3,
-  secondsBetweenTries: 0
+  millisecondsBetweenTries: 0
 }
 
 export default async function anticipate(block:asyncFunction, overrides?:Partial<AnticipationConfig>) {
   const config = { ...DefaultConfig, ...overrides };
-  return runBlock(block, config.tries, config.secondsBetweenTries)
+  return runBlock(block, config.tries, config.millisecondsBetweenTries)
 }
