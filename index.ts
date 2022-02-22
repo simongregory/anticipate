@@ -12,7 +12,7 @@ function delay(ms:number): Promise<any> {
 }
 
 async function runBlock(block:asyncFunction, maxRepetitions:number, duration:number = 0): Promise<any> {
-  if(maxRepetitions > 0) {
+  if (maxRepetitions > 0) {
     try {
       return await block();
     } catch (error) {
