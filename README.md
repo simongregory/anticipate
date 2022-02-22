@@ -29,4 +29,4 @@ const result = await anticipate(block, { tries: 5; millisecondsBetweenTries: 10 
 
 ## License
 
-Please see [LICENCE](LICENSE).
+Released under the MIT License. Please see the accompanying [LICENSE](LICENSE) document for details.
