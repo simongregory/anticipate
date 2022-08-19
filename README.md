@@ -30,7 +30,7 @@ const result = await anticipate(block, { tries: 5; millisecondsBetweenTries: 10 
 In use you may want to consider a wrapper method that allows you to define the particulars of your configuration: 
 
 ```js
-function anticipator(block: asyncFunction) {
+function anticipator(block: any) {
   return async () => {
     anticipate(block, { millisecondsBetweenTries: 50 });
   };

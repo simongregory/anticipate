@@ -1,7 +1,7 @@
 {
   "name": "@simongregory/anticipate",
   "repository": "https://github.com/simongregory/anticipate",
-  "version": "0.1.1-publish-test.1",
+  "version": "0.1.1-publish-test.2",
   "description": "Anticiapte the future",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
