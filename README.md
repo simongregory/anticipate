@@ -32,7 +32,7 @@ In use you may want to consider a wrapper method that allows you to define the p
 ```js
 function anticipator(block: any) {
   return async () => {
-    anticipate(block, { millisecondsBetweenTries: 50 });
+    return anticipate(block, { millisecondsBetweenTries: 50 });
   };
 }
 
