@@ -1,12 +1,14 @@
 {
   "name": "@simongregory/anticipate",
   "repository": "https://github.com/simongregory/anticipate",
-  "version": "0.1.0",
+  "version": "0.1.1-publish-test.1",
   "description": "Anticiapte the future",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "npm run clean && tsc",
     "clean": "rm -fr dist/*",
+    "prepublish": "npm run build",
     "test": "mocha"
   },
   "author": "Simon Gregory",
