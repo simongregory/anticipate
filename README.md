@@ -27,6 +27,21 @@ const block = async () => { /* do something that might error */ };
 const result = await anticipate(block, { tries: 5; millisecondsBetweenTries: 10 });
 ```
 
+In use you may want to consider a wrapper method that allows you to define the particulars of your configuration: 
+
+```js
+function anticipator(block: asyncFunction) {
+  return async () => {
+    anticipate(block, { millisecondsBetweenTries: 50 });
+  };
+}
+
+it('returns a 200 status code', anticipator(async () => {
+  const response = await request('http://example.com').get('/list');
+  expect(response.status).toEqual(200);
+}));
+```
+
 ## License
 
 Released under the MIT License. Please see the accompanying [LICENSE](LICENSE) document for details.
