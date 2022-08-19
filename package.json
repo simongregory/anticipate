@@ -30,5 +30,8 @@
     "extension": [
       "ts"
     ]
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
   }
 }
